@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100 min-h-screen flex items-center justify-center font-sans">
+
+
+ 
+  <div id="header"></div>
+
+ 
+  <section class="max-w-xl mx-auto py-16 px-6">
+    <h1 class="text-4xl font-bold mb-6 text-center">Contact Us</h1>
+    <p class="text-lg text-gray-600 font-mono mb-10 text-center">
+      We'd love to hear from you! Send us a message using the form below.
+    </p>
+
+    <form id="contactForm" class="space-y-6 bg-gray-50 p-8 rounded-xl shadow">
+      <div>
+        <label class="block text-sm font-semibold mb-1">Name</label>
+        <input type="text" name="name" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-green-500" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">Email</label>
+        <input type="email" name="email" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-green-500" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1">Message</label>
+        <textarea id="textarea" name="message" rows="5" required
+                  class="w-full border font-mono border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-green-500"></textarea>
+      </div>
+
+      <button id="btn" type="submit"
+              class=" ml-[10px] bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
+        Send Message
+      </button>
+    </form>
+
+   
+    <div id="thankYouMessage" class="mt-6 hidden bg-green-100 border border-green-300 text-green-800 px-6 py-4 rounded-lg text-center">
+      ✅ Thanks for contacting us! We will reach out to you shortly.
+    </div>
+  </section>
+
+  <script>
+     const sendMsg = document.getElementById('btn');
+     const textarea = document.getElementById('textarea')
+     sendMsg.addEventListener('click', ()=> {
+      if(textarea.value.trim() === '') {
+        console.log('fill the form')
+      }else {
+        alert('Thank you for contacting us we will soon reach out to you');
+        
+      }
+     
+     })
+  </script>
+
+
+  
+</body>
+</html>
